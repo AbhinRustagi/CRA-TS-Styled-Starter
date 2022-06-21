@@ -1,0 +1,84 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/recommended",
+		"plugin:jsx-a11y/strict",
+		"plugin:react-hooks/recommended",
+		"plugin:import/typescript",
+		"react",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint",
+		"import",
+		"jsx-a11y",
+		"better-styled-components"
+	],
+	"globals": { "process": "readonly" },
+	"rules": {
+		"no-unused-vars": "warn",
+		"no-empty-pattern": "warn",
+		"@typescript-eslint/no-unused-vars": 0,
+		"react/self-closing-comp": 0,
+		"indent": [1, "tab"],
+		"linebreak-style": 0,
+		"quotes": ["error", "single"],
+		"semi": ["error", "never"],
+		"import/order": [
+			"warn",
+			{
+				"groups": [
+					"builtin",
+					["parent", "sibling"],
+					"object",
+					"index",
+					"external",
+					"internal"
+				],
+				"alphabetize": { "order": "asc", "caseInsensitive": false },
+				"warnOnUnassignedImports": true,
+				"newlines-between": "always"
+			}
+		],
+		"react/boolean-prop-naming": [
+			"warn",
+			{ "rule": "^is[A-Z]([A-Za-z0-9]?)+" }
+		],
+		"no-restricted-imports": [
+			"error",
+			{
+				"paths": [
+					{
+						"name": "styled-components",
+						"message": "Please import from styled-components/macro."
+					}
+				],
+				"patterns": ["!styled-components/macro"]
+			}
+		]
+	},
+	"settings": {
+		"react": { "version": "detect" },
+		"import/resolver": {
+			"node": {
+				"paths": ["src"],
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	}
+}

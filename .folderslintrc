@@ -1,0 +1,9 @@
+{
+	"root": "src",
+	"rules": [
+		"components/*",
+		"routes/*/components/*",
+		"hooks",
+		"theme"
+	]
+}

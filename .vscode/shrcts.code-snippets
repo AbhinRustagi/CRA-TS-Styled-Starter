@@ -1,0 +1,12 @@
+{
+	"Styled Components Macro": {
+		"prefix": "styled-macro",
+		"body": "import styled from 'styled-components/macro'",
+		"description": "Imports styled components macro."
+	},
+	"Styled Components CSS Macro": {
+		"prefix": "css-macro",
+		"body": "import { css } from 'styled-components/macro'",
+		"description": "Imports styled components css macro."
+	}
+}
